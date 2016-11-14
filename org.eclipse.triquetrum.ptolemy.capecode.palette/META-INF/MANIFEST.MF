@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Example Palette provider
+Bundle-SymbolicName: org.eclipse.triquetrum.ptolemy.capecode.palette;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.triquetrum.workflow.editor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Eclipse Triquetrum
+Import-Package: org.eclipse.core.runtime,
+ org.eclipse.emf.common.util,
+ org.osgi.framework;version="1.8.0",
+ org.terraswarm.accessor;version="11.0.0",
+ ptolemy.actor.lib;version="11.0.0",
+ ptolemy.kernel;version="11.0.0",
+ ptolemy.kernel.util;version="11.0.0",
+ ptolemy.moml;version="11.0.0"
