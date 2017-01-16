@@ -9,6 +9,7 @@ Bundle-Vendor: Eclipse Triquetrum
 Import-Package: org.eclipse.core.runtime,
  org.eclipse.emf.common.util,
  org.osgi.framework;version="1.8.0",
+ org.slf4j;version="1.7.2",
  org.terraswarm.accessor;version="11.0.0",
  ptolemy.actor.lib;version="11.0.0",
  ptolemy.kernel;version="11.0.0",

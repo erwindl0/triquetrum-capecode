@@ -15,6 +15,8 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.triquetrum.workflow.editor.palette.spi.PaletteConfigurationElement;
 import org.eclipse.triquetrum.workflow.editor.palette.spi.PaletteEntryProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.terraswarm.accessor.AccessorLibrary;
 
 import ptolemy.kernel.CompositeEntity;
@@ -23,6 +25,7 @@ import ptolemy.kernel.util.IllegalActionException;
 import ptolemy.kernel.util.NameDuplicationException;
 
 public class AccessorPaletteEntryProvider implements PaletteEntryProvider {
+  private final static Logger LOGGER = LoggerFactory.getLogger(AccessorPaletteEntryProvider.class);
 
   @Override
   public IConfigurationElement[] getPaletteEntries() {
@@ -40,8 +43,7 @@ public class AccessorPaletteEntryProvider implements PaletteEntryProvider {
       }
       return results.toArray(new IConfigurationElement[0]);
     } catch (IllegalActionException | NameDuplicationException | MalformedURLException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
+      LOGGER.error("Error obtaining palette entries for Acessors library", e);
       return new IConfigurationElement[] {};
     }
   }
